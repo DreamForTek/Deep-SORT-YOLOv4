@@ -6,9 +6,7 @@ Class definition of YOLO_v4 style detection model on image and video
 import colorsys
 import tensorflow as tf
 import tensorflow.python.keras.backend as K
-
 import numpy as np
-from keras import backend as K
 from keras.models import load_model
 
 from yolo4.model import yolo_eval, Mish
