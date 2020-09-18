@@ -6,7 +6,7 @@ Class definition of YOLO_v4 style detection model on image and video
 import colorsys
 import tensorflow as tf
 from tensorflow.compat.v1.keras import backend as K
-from keras.backend.tensorflow_backend import get_session
+
 import numpy as np
 from keras import backend as K
 from keras.models import load_model
@@ -26,7 +26,7 @@ class YOLO(object):
         self.iou = 0.5
         self.class_names = self._get_class()
         self.anchors = self._get_anchors()
-        self.sess = tf.compat.v1.keras.backend.get_session()
+        self.sess = K.get_session()
         self.model_image_size = (416, 416)  # fixed size or (None, None)
         self.is_fixed_size = self.model_image_size != (None, None)
         self.boxes, self.scores, self.classes = self.generate()
