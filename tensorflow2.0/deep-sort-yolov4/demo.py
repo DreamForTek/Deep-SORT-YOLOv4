@@ -18,6 +18,7 @@ from deep_sort.tracker import Tracker
 from tools import generate_detections as gdet
 import imutils.video
 from videocaptureasync import VideoCaptureAsync
+import tensorflow as tf
 
 warnings.filterwarnings('ignore')
 
